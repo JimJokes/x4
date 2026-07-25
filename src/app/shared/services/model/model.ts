@@ -34,6 +34,7 @@ export interface ProductionWare {
 export interface ProductionEffect {
   type: string;
   product: number;
+	cycle: number
 }
 
 export interface Production {

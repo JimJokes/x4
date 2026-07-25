@@ -191,7 +191,7 @@ export class ResourceCalculator {
                     if (x.production) {
                         for (let production of x.production) {
                             const effect = production.value.effects ? production.value.effects.find(e => e.type == Effects.work) : null;
-                            let efficiency = effect == null ? 1 : (1 + effect.product * multiplier);
+                            let efficiency = effect == null ? 1 : (1 + effect.product * multiplier) / (1 - effect.cycle * multiplier);
 
                             if (production.ware.id === Wares.energycells.id) {
                                 // add sunlight for energy cells
