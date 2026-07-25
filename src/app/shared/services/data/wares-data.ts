@@ -14,35 +14,37 @@ export const Wares = {
     icon: 'ware_advancedcomposites',
     volume: 32,
     transport: TransportType.container,
-    price: { min: 432, max: 648, avg: 540 },
+    price: { min: 516, max: 1168, avg: 688 },
     group: WareGroups.hightech,
     production: [
       {
-        time: 300,
-        amount: 54,
+        time: 600,
+        amount: 108,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 50 },
-          { ware: 'graphene', amount: 80 },
-          { ware: 'refinedmetals', amount: 80 },
+          { ware: 'energycells', amount: 100 },
+          { ware: 'graphene', amount: 160 },
+          { ware: 'refinedmetals', amount: 160 },
         ],
         effects: [
-          { type: Effects.work, product: 0.34 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
-        time: 300,
-        amount: 54,
+        time: 600,
+        amount: 108,
         method: 'teladi',
         name: 'Teladi',
         wares: [
-          { ware: 'energycells', amount: 50 },
-          { ware: 'graphene', amount: 80 },
-          { ware: 'teladianium', amount: 58 },
+          { ware: 'energycells', amount: 100 },
+          { ware: 'graphene', amount: 160 },
+          { ware: 'teladianium', amount: 116 },
         ],
         effects: [
-          { type: Effects.work, product: 0.34 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -56,21 +58,22 @@ export const Wares = {
     icon: 'ware_advancedelectronics',
     volume: 30,
     transport: TransportType.container,
-    price: { min: 710, max: 1318, avg: 1014 },
+    price: { min: 855, max: 1620, avg: 1140 },
     group: WareGroups.shiptech,
     production: [
       {
-        time: 720,
-        amount: 54,
+        time: 600,
+        amount: 68,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 60 },
-          { ware: 'microchips', amount: 44 },
-          { ware: 'quantumtubes', amount: 20 },
+          { ware: 'energycells', amount: 75 },
+          { ware: 'microchips', amount: 56 },
+          { ware: 'quantumtubes', amount: 26 },
         ],
         effects: [
-          { type: Effects.work, product: 0.36 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -84,20 +87,21 @@ export const Wares = {
     icon: 'ware_antimattercells',
     volume: 18,
     transport: TransportType.container,
-    price: { min: 121, max: 282, avg: 202 },
+    price: { min: 115, max: 405, avg: 153 },
     group: WareGroups.refined,
     production: [
       {
-        time: 120,
-        amount: 99,
+        time: 300,
+        amount: 248,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 100 },
-          { ware: 'hydrogen', amount: 320 },
+          { ware: 'energycells', amount: 250 },
+          { ware: 'hydrogen', amount: 800 },
         ],
         effects: [
-          { type: Effects.work, product: 0.35 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -111,21 +115,22 @@ export const Wares = {
     icon: 'ware_antimatterconverters',
     volume: 10,
     transport: TransportType.container,
-    price: { min: 248, max: 461, avg: 354 },
+    price: { min: 300, max: 560, avg: 400 },
     group: WareGroups.shiptech,
     production: [
       {
-        time: 300,
-        amount: 133,
+        time: 600,
+        amount: 266,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'advancedcomposites', amount: 20 },
-          { ware: 'energycells', amount: 80 },
-          { ware: 'microchips', amount: 30 },
+          { ware: 'advancedcomposites', amount: 40 },
+          { ware: 'energycells', amount: 160 },
+          { ware: 'microchips', amount: 60 },
         ],
         effects: [
-          { type: Effects.work, product: 0.39 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -139,27 +144,28 @@ export const Wares = {
     icon: 'ware_claytronics',
     volume: 24,
     transport: TransportType.container,
-    price: { min: 1734, max: 2346, avg: 2040 },
+    price: { min: 2122, max: 2904, avg: 2496 },
     group: WareGroups.shiptech,
     production: [
       {
-        time: 900,
+        time: 600,
         amount: 108,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'antimattercells', amount: 100 },
+          { ware: 'antimattercells', amount: 101 },
           { ware: 'energycells', amount: 140 },
-          { ware: 'microchips', amount: 160 },
-          { ware: 'quantumtubes', amount: 100 },
+          { ware: 'microchips', amount: 161 },
+          { ware: 'quantumtubes', amount: 101 },
         ],
         effects: [
-          { type: Effects.work, product: 0.34 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
         time: 300,
-        amount: 60,
+        amount: 80,
         method: 'recycling',
         name: 'Recycling',
         wares: [
@@ -167,7 +173,7 @@ export const Wares = {
           { ware: 'scrapmetal', amount: 300 },
         ],
         effects: [
-          { type: Effects.work, product: 0.34 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
         ],
       },
     ]
@@ -181,23 +187,24 @@ export const Wares = {
     icon: 'ware_dronecomponents',
     volume: 30,
     transport: TransportType.container,
-    price: { min: 685, max: 1142, avg: 914 },
+    price: { min: 653, max: 1350, avg: 870 },
     group: WareGroups.shiptech,
     production: [
       {
-        time: 1200,
-        amount: 105,
+        time: 600,
+        amount: 53,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 60 },
-          { ware: 'engineparts', amount: 20 },
-          { ware: 'hullparts', amount: 20 },
-          { ware: 'microchips', amount: 20 },
-          { ware: 'scanningarrays', amount: 40 },
+          { ware: 'energycells', amount: 30 },
+          { ware: 'engineparts', amount: 10 },
+          { ware: 'hullparts', amount: 10 },
+          { ware: 'microchips', amount: 10 },
+          { ware: 'scanningarrays', amount: 20 },
         ],
         effects: [
-          { type: Effects.work, product: 0.43 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -211,31 +218,33 @@ export const Wares = {
     icon: 'ware_energycells',
     volume: 1,
     transport: TransportType.container,
-    price: { min: 10, max: 22, avg: 16 },
+    price: { min: 12, max: 29, avg: 16 },
     group: WareGroups.energy,
     production: [
       {
-        time: 60,
-        amount: 175,
+        time: 300,
+        amount: 1750,
         method: 'default',
         name: 'Universal',
         wares: [
         ],
         effects: [
           { type: Effects.sunlight, product: 1 },
-          { type: Effects.work, product: 0.43 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
-        time: 60,
-        amount: 50,
+        time: 300,
+        amount: 750,
         method: 'terran',
         name: 'Terran',
         wares: [
         ],
         effects: [
           { type: Effects.sunlight, product: 1 },
-          { type: Effects.work, product: 0.43 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -249,35 +258,37 @@ export const Wares = {
     icon: 'ware_engineparts',
     volume: 15,
     transport: TransportType.container,
-    price: { min: 128, max: 237, avg: 182 },
+    price: { min: 130, max: 398, avg: 173 },
     group: WareGroups.hightech,
     production: [
       {
-        time: 900,
-        amount: 208,
+        time: 600,
+        amount: 139,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'antimattercells', amount: 80 },
-          { ware: 'energycells', amount: 60 },
-          { ware: 'refinedmetals', amount: 96 },
+          { ware: 'antimattercells', amount: 53 },
+          { ware: 'energycells', amount: 40 },
+          { ware: 'refinedmetals', amount: 64 },
         ],
         effects: [
-          { type: Effects.work, product: 0.47 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
-        time: 900,
-        amount: 208,
+        time: 600,
+        amount: 139,
         method: 'teladi',
         name: 'Teladi',
         wares: [
-          { ware: 'antimattercells', amount: 80 },
-          { ware: 'energycells', amount: 60 },
-          { ware: 'teladianium', amount: 70 },
+          { ware: 'antimattercells', amount: 53 },
+          { ware: 'energycells', amount: 40 },
+          { ware: 'teladianium', amount: 47 },
         ],
         effects: [
-          { type: Effects.work, product: 0.47 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -291,7 +302,7 @@ export const Wares = {
     icon: 'ware_fieldcoils',
     volume: 15,
     transport: TransportType.container,
-    price: { min: 247, max: 576, avg: 412 },
+    price: { min: 360, max: 720, avg: 480 },
     group: WareGroups.shiptech,
     production: [
       {
@@ -305,7 +316,8 @@ export const Wares = {
           { ware: 'quantumtubes', amount: 43 },
         ],
         effects: [
-          { type: Effects.work, product: 0.43 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -320,22 +332,23 @@ export const Wares = {
     volume: 1,
     transport: TransportType.container,
     illegal: [ Factions.loanshark ],
-    price: { min: 12, max: 29, avg: 21 },
+    price: { min: 14, max: 34, avg: 18 },
     group: WareGroups.food,
     production: [
       {
-        time: 240,
-        amount: 460,
+        time: 300,
+        amount: 575,
         method: 'default',
         name: 'Argon',
         wares: [
-          { ware: 'energycells', amount: 100 },
-          { ware: 'meat', amount: 40 },
-          { ware: 'spices', amount: 40 },
-          { ware: 'wheat', amount: 40 },
+          { ware: 'energycells', amount: 125 },
+          { ware: 'meat', amount: 50 },
+          { ware: 'spices', amount: 50 },
+          { ware: 'wheat', amount: 50 },
         ],
         effects: [
-          { type: Effects.work, product: 0.35 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -349,20 +362,21 @@ export const Wares = {
     icon: 'ware_graphene',
     volume: 20,
     transport: TransportType.container,
-    price: { min: 100, max: 233, avg: 166 },
+    price: { min: 150, max: 480, avg: 200 },
     group: WareGroups.refined,
     production: [
       {
-        time: 240,
-        amount: 96,
+        time: 300,
+        amount: 240,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 80 },
-          { ware: 'methane', amount: 320 },
+          { ware: 'energycells', amount: 200 },
+          { ware: 'methane', amount: 800 },
         ],
         effects: [
-          { type: Effects.work, product: 0.46 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -376,7 +390,7 @@ export const Wares = {
     icon: 'ware_helium',
     volume: 6,
     transport: TransportType.liquid,
-    price: { min: 37, max: 51, avg: 44 },
+    price: { min: 36, max: 55, avg: 42 },
     group: WareGroups.gases,
     production: [
     ]
@@ -390,21 +404,22 @@ export const Wares = {
     icon: 'ware_hullparts',
     volume: 12,
     transport: TransportType.container,
-    price: { min: 146, max: 272, avg: 209 },
+    price: { min: 180, max: 420, avg: 240 },
     group: WareGroups.hightech,
     production: [
       {
-        time: 900,
-        amount: 294,
+        time: 600,
+        amount: 392,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 80 },
-          { ware: 'graphene', amount: 40 },
-          { ware: 'refinedmetals', amount: 280 },
+          { ware: 'energycells', amount: 106 },
+          { ware: 'graphene', amount: 54 },
+          { ware: 'refinedmetals', amount: 374 },
         ],
         effects: [
-          { type: Effects.work, product: 0.37 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
@@ -417,21 +432,22 @@ export const Wares = {
           { ware: 'scrapmetal', amount: 75 },
         ],
         effects: [
-          { type: Effects.work, product: 0.37 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
         ],
       },
       {
-        time: 900,
-        amount: 294,
+        time: 600,
+        amount: 392,
         method: 'teladi',
         name: 'Teladi',
         wares: [
-          { ware: 'energycells', amount: 80 },
-          { ware: 'graphene', amount: 40 },
-          { ware: 'teladianium', amount: 204 },
+          { ware: 'energycells', amount: 106 },
+          { ware: 'graphene', amount: 54 },
+          { ware: 'teladianium', amount: 272 },
         ],
         effects: [
-          { type: Effects.work, product: 0.37 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -445,7 +461,7 @@ export const Wares = {
     icon: 'ware_hydrogen',
     volume: 6,
     transport: TransportType.liquid,
-    price: { min: 49, max: 67, avg: 58 },
+    price: { min: 31, max: 47, avg: 36 },
     group: WareGroups.gases,
     production: [
     ]
@@ -460,7 +476,7 @@ export const Wares = {
     volume: 8,
     transport: TransportType.solid,
     illegal: [ Factions.loanshark ],
-    price: { min: 26, max: 35, avg: 30 },
+    price: { min: 41, max: 62, avg: 48 },
     group: WareGroups.ice,
     production: [
     ]
@@ -472,10 +488,10 @@ export const Wares = {
     description: 'Chemically processed from crushed maja snail shells, maja dust is a relaxant and hallucinogenic sold as a powder-substance that is inhaled. Though any official Paranid government would have the populous believe that maja dust is not commonly consumed, it is thought to be highly likely, particularly in light of the ongoing Paranid civil war, that many Paranid and non-Paranid alike are partaking in the outlawed substance.',
     factoryName: 'Maja Dust Factory',
     icon: 'ware_majadust',
-    volume: 6,
+    volume: 1,
     transport: TransportType.container,
     illegal: [ Factions.holyorder, Factions.paranid ],
-    price: { min: 94, max: 323, avg: 208 },
+    price: { min: 210, max: 380, avg: 280 },
     group: WareGroups.pharmaceutical,
     production: [
       {
@@ -489,7 +505,8 @@ export const Wares = {
           { ware: 'spices', amount: 60 },
         ],
         effects: [
-          { type: Effects.work, product: 0.75 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -501,22 +518,23 @@ export const Wares = {
     description: 'Grown across many Paranid colonies, as well as in tanks across Paranid space, maja snails provide Paranid with a good number of the nutrients they need to survive. Commonly treated very well, once a snail dies its shell and flesh are both processed as part of soja husk, along with soja beans. The shell of the maja snail is also commonly used as the main ingredient of the drug known as maja dust.',
     factoryName: 'Maja Snail Farm',
     icon: 'ware_majasnails',
-    volume: 6,
+    volume: 2,
     transport: TransportType.container,
-    price: { min: 35, max: 81, avg: 58 },
+    price: { min: 63, max: 114, avg: 84 },
     group: WareGroups.agricultural,
     production: [
       {
-        time: 450,
-        amount: 146,
+        time: 300,
+        amount: 97,
         method: 'default',
         name: 'Paranid',
         wares: [
-          { ware: 'energycells', amount: 40 },
-          { ware: 'water', amount: 100 },
+          { ware: 'energycells', amount: 27 },
+          { ware: 'water', amount: 67 },
         ],
         effects: [
-          { type: Effects.work, product: 0.59 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -528,22 +546,23 @@ export const Wares = {
     description: 'Though meat comes in a great variety, the most sought-after type as of late is so-called \'vegan meat\', synthesised and cloned not from real animals, but from cell cultures. However, real Argnu meat is still popular within the human population of many worlds.',
     factoryName: 'Meat Factory',
     icon: 'ware_meat',
-    volume: 6,
+    volume: 2,
     transport: TransportType.container,
-    price: { min: 29, max: 68, avg: 48 },
+    price: { min: 35, max: 76, avg: 46 },
     group: WareGroups.agricultural,
     production: [
       {
-        time: 450,
-        amount: 290,
+        time: 300,
+        amount: 193,
         method: 'default',
         name: 'Argon',
         wares: [
-          { ware: 'energycells', amount: 80 },
-          { ware: 'water', amount: 100 },
+          { ware: 'energycells', amount: 53 },
+          { ware: 'water', amount: 67 },
         ],
         effects: [
-          { type: Effects.work, product: 0.33 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -557,7 +576,7 @@ export const Wares = {
     icon: 'ware_medicalsupplies',
     volume: 2,
     transport: TransportType.container,
-    price: { min: 43, max: 89, avg: 66 },
+    price: { min: 51, max: 100, avg: 68 },
     group: WareGroups.pharmaceutical,
     production: [
       {
@@ -572,7 +591,8 @@ export const Wares = {
           { ware: 'wheat', amount: 30 },
         ],
         effects: [
-          { type: Effects.work, product: 0.28 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
@@ -587,7 +607,8 @@ export const Wares = {
           { ware: 'water', amount: 60 },
         ],
         effects: [
-          { type: Effects.work, product: 0.28 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
@@ -602,7 +623,8 @@ export const Wares = {
           { ware: 'water', amount: 60 },
         ],
         effects: [
-          { type: Effects.work, product: 0.28 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
@@ -617,7 +639,8 @@ export const Wares = {
           { ware: 'water', amount: 60 },
         ],
         effects: [
-          { type: Effects.work, product: 0.28 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
@@ -631,7 +654,8 @@ export const Wares = {
           { ware: 'proteinpaste', amount: 24 },
         ],
         effects: [
-          { type: Effects.work, product: 0.59 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
@@ -645,7 +669,8 @@ export const Wares = {
           { ware: 'water', amount: 60 },
         ],
         effects: [
-          { type: Effects.work, product: 0.28 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -659,7 +684,7 @@ export const Wares = {
     icon: 'ware_methane',
     volume: 6,
     transport: TransportType.liquid,
-    price: { min: 41, max: 55, avg: 48 },
+    price: { min: 41, max: 62, avg: 48 },
     group: WareGroups.gases,
     production: [
     ]
@@ -673,20 +698,21 @@ export const Wares = {
     icon: 'ware_microchips',
     volume: 22,
     transport: TransportType.container,
-    price: { min: 805, max: 1090, avg: 948 },
+    price: { min: 693, max: 1254, avg: 924 },
     group: WareGroups.hightech,
     production: [
       {
         time: 600,
-        amount: 72,
+        amount: 216,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 50 },
-          { ware: 'siliconwafers', amount: 200 },
+          { ware: 'energycells', amount: 150 },
+          { ware: 'siliconwafers', amount: 600 },
         ],
         effects: [
-          { type: Effects.work, product: 0.36 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -700,21 +726,22 @@ export const Wares = {
     icon: 'ware_missilecomponents',
     volume: 2,
     transport: TransportType.container,
-    price: { min: 6, max: 13, avg: 9 },
+    price: { min: 17, max: 54, avg: 22 },
     group: WareGroups.shiptech,
     production: [
       {
-        time: 900,
-        amount: 281,
+        time: 600,
+        amount: 374,
         method: 'default',
         name: 'Universal',
         wares: [
           { ware: 'advancedcomposites', amount: 2 },
-          { ware: 'energycells', amount: 20 },
+          { ware: 'energycells', amount: 26 },
           { ware: 'hullparts', amount: 2 },
         ],
         effects: [
-          { type: Effects.work, product: 0.53 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -728,7 +755,7 @@ export const Wares = {
     icon: 'ware_nividium',
     volume: 10,
     transport: TransportType.solid,
-    price: { min: 434, max: 587, avg: 510 },
+    price: { min: 434, max: 663, avg: 510 },
     group: WareGroups.minerals,
     production: [
     ]
@@ -742,7 +769,7 @@ export const Wares = {
     icon: 'ware_nostropoil',
     volume: 1,
     transport: TransportType.container,
-    price: { min: 20, max: 47, avg: 34 },
+    price: { min: 27, max: 52, avg: 36 },
     group: WareGroups.food,
     production: [
       {
@@ -757,7 +784,8 @@ export const Wares = {
           { ware: 'water', amount: 60 },
         ],
         effects: [
-          { type: Effects.work, product: 0.2 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -771,7 +799,7 @@ export const Wares = {
     icon: 'ware_ore',
     volume: 10,
     transport: TransportType.solid,
-    price: { min: 43, max: 58, avg: 50 },
+    price: { min: 43, max: 65, avg: 50 },
     group: WareGroups.minerals,
     production: [
     ]
@@ -785,21 +813,22 @@ export const Wares = {
     icon: 'ware_plasmaconductors',
     volume: 32,
     transport: TransportType.container,
-    price: { min: 769, max: 1282, avg: 1026 },
+    price: { min: 936, max: 1728, avg: 1248 },
     group: WareGroups.hightech,
     production: [
       {
-        time: 900,
-        amount: 44,
+        time: 600,
+        amount: 29,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 60 },
-          { ware: 'graphene', amount: 96 },
-          { ware: 'superfluidcoolant', amount: 140 },
+          { ware: 'energycells', amount: 40 },
+          { ware: 'graphene', amount: 64 },
+          { ware: 'superfluidcoolant', amount: 93 },
         ],
         effects: [
-          { type: Effects.work, product: 0.43 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -813,21 +842,22 @@ export const Wares = {
     icon: 'ware_quantumtubes',
     volume: 22,
     transport: TransportType.container,
-    price: { min: 225, max: 375, avg: 300 },
+    price: { min: 281, max: 704, avg: 374 },
     group: WareGroups.hightech,
     production: [
       {
-        time: 720,
-        amount: 94,
+        time: 600,
+        amount: 156,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 40 },
-          { ware: 'graphene', amount: 116 },
-          { ware: 'superfluidcoolant', amount: 30 },
+          { ware: 'energycells', amount: 66 },
+          { ware: 'graphene', amount: 194 },
+          { ware: 'superfluidcoolant', amount: 50 },
         ],
         effects: [
-          { type: Effects.work, product: 0.53 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -855,20 +885,21 @@ export const Wares = {
     icon: 'ware_refinedmetals',
     volume: 14,
     transport: TransportType.container,
-    price: { min: 89, max: 207, avg: 148 },
+    price: { min: 131, max: 371, avg: 175 },
     group: WareGroups.refined,
     production: [
       {
-        time: 150,
-        amount: 88,
+        time: 300,
+        amount: 352,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 90 },
-          { ware: 'ore', amount: 240 },
+          { ware: 'energycells', amount: 360 },
+          { ware: 'ore', amount: 960 },
         ],
         effects: [
-          { type: Effects.work, product: 0.43 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -882,7 +913,7 @@ export const Wares = {
     icon: 'ware_scanningarrays',
     volume: 38,
     transport: TransportType.container,
-    price: { min: 842, max: 1264, avg: 1053 },
+    price: { min: 884, max: 1748, avg: 1178 },
     group: WareGroups.hightech,
     production: [
       {
@@ -896,7 +927,8 @@ export const Wares = {
           { ware: 'siliconwafers', amount: 60 },
         ],
         effects: [
-          { type: Effects.work, product: 0.38 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
@@ -910,7 +942,8 @@ export const Wares = {
           { ware: 'teladianium', amount: 73 },
         ],
         effects: [
-          { type: Effects.work, product: 0.38 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -928,7 +961,7 @@ export const Wares = {
     group: WareGroups.refined,
     production: [
       {
-        time: 60,
+        time: 20,
         amount: 1,
         method: 'processing',
         name: 'Processing',
@@ -950,21 +983,22 @@ export const Wares = {
     icon: 'ware_shieldcomponents',
     volume: 10,
     transport: TransportType.container,
-    price: { min: 113, max: 264, avg: 188 },
+    price: { min: 165, max: 380, avg: 220 },
     group: WareGroups.shiptech,
     production: [
       {
-        time: 1200,
-        amount: 193,
+        time: 600,
+        amount: 97,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 70 },
-          { ware: 'plasmaconductors', amount: 20 },
-          { ware: 'quantumtubes', amount: 20 },
+          { ware: 'energycells', amount: 35 },
+          { ware: 'plasmaconductors', amount: 10 },
+          { ware: 'quantumtubes', amount: 10 },
         ],
         effects: [
-          { type: Effects.work, product: 0.43 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -978,7 +1012,7 @@ export const Wares = {
     icon: 'ware_silicon',
     volume: 10,
     transport: TransportType.solid,
-    price: { min: 111, max: 150, avg: 130 },
+    price: { min: 85, max: 130, avg: 100 },
     group: WareGroups.minerals,
     production: [
     ]
@@ -992,20 +1026,21 @@ export const Wares = {
     icon: 'ware_siliconwafers',
     volume: 18,
     transport: TransportType.container,
-    price: { min: 180, max: 419, avg: 299 },
+    price: { min: 206, max: 526, avg: 274 },
     group: WareGroups.refined,
     production: [
       {
-        time: 180,
-        amount: 107,
+        time: 300,
+        amount: 356,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 90 },
-          { ware: 'silicon', amount: 240 },
+          { ware: 'energycells', amount: 300 },
+          { ware: 'silicon', amount: 800 },
         ],
         effects: [
-          { type: Effects.work, product: 0.37 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1019,20 +1054,21 @@ export const Wares = {
     icon: 'ware_smartchips',
     volume: 2,
     transport: TransportType.container,
-    price: { min: 46, max: 69, avg: 57 },
+    price: { min: 39, max: 82, avg: 52 },
     group: WareGroups.shiptech,
     production: [
       {
         time: 600,
-        amount: 143,
+        amount: 286,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 50 },
-          { ware: 'siliconwafers', amount: 20 },
+          { ware: 'energycells', amount: 100 },
+          { ware: 'siliconwafers', amount: 40 },
         ],
         effects: [
-          { type: Effects.work, product: 0.37 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1046,7 +1082,7 @@ export const Wares = {
     icon: 'ware_sojabeans',
     volume: 5,
     transport: TransportType.container,
-    price: { min: 40, max: 93, avg: 67 },
+    price: { min: 71, max: 125, avg: 95 },
     group: WareGroups.agricultural,
     production: [
       {
@@ -1059,7 +1095,8 @@ export const Wares = {
           { ware: 'water', amount: 80 },
         ],
         effects: [
-          { type: Effects.work, product: 0.48 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1073,7 +1110,7 @@ export const Wares = {
     icon: 'ware_sojahusk',
     volume: 1,
     transport: TransportType.container,
-    price: { min: 19, max: 45, avg: 32 },
+    price: { min: 31, max: 57, avg: 41 },
     group: WareGroups.food,
     production: [
       {
@@ -1088,7 +1125,8 @@ export const Wares = {
           { ware: 'spices', amount: 20 },
         ],
         effects: [
-          { type: Effects.work, product: 0.37 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1100,24 +1138,25 @@ export const Wares = {
     description: 'Spacefuel is made from processing and distilling wheat, water and a blend of spices. It is a cheap but strong alcoholic beverage that has been made illegal to trade in bulk across the Jump Gate network in an attempt to avoid drunken accidents on both ships and stations. In order to sell spacefuel as a beverage, one must be a licenced bar owner.',
     factoryName: 'Spacefuel Factory',
     icon: 'ware_spacefuel',
-    volume: 2,
+    volume: 1,
     transport: TransportType.container,
     illegal: [ Factions.antigone, Factions.argon, Factions.pioneers, Factions.terran ],
-    price: { min: 60, max: 207, avg: 133 },
+    price: { min: 146, max: 295, avg: 195 },
     group: WareGroups.pharmaceutical,
     production: [
       {
-        time: 480,
-        amount: 98,
+        time: 600,
+        amount: 123,
         method: 'default',
         name: 'Argon',
         wares: [
-          { ware: 'energycells', amount: 40 },
-          { ware: 'water', amount: 100 },
-          { ware: 'wheat', amount: 80 },
+          { ware: 'energycells', amount: 50 },
+          { ware: 'water', amount: 125 },
+          { ware: 'wheat', amount: 100 },
         ],
         effects: [
-          { type: Effects.work, product: 0.69 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1132,7 +1171,7 @@ export const Wares = {
     volume: 3,
     transport: TransportType.container,
     illegal: [ Factions.antigone, Factions.argon, Factions.holyorder, Factions.paranid, Factions.terran ],
-    price: { min: 75, max: 257, avg: 166 },
+    price: { min: 92, max: 222, avg: 122 },
     group: WareGroups.pharmaceutical,
     production: [
       {
@@ -1146,7 +1185,8 @@ export const Wares = {
           { ware: 'swampplant', amount: 120 },
         ],
         effects: [
-          { type: Effects.work, product: 0.7 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1158,22 +1198,23 @@ export const Wares = {
     description: 'Spices are used in many food and pharmaceutical products; primarily as an agent to add extra flavour, but also sometimes due to other properties that some are known to have, ranging from acting as a relaxant to a mild hallucinogenic. Factories that legally produce spices are commonly inspected to make sure their produce is in line with the local law, but as they are often shipped as a mixture, it is sometimes difficult to keep an eye on which spice is being used for which purpose.',
     factoryName: 'Spice Farm',
     icon: 'ware_spices',
-    volume: 3,
+    volume: 2,
     transport: TransportType.container,
-    price: { min: 12, max: 28, avg: 20 },
+    price: { min: 15, max: 50, avg: 33 },
     group: WareGroups.agricultural,
     production: [
       {
-        time: 600,
-        amount: 500,
+        time: 300,
+        amount: 250,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 40 },
-          { ware: 'water', amount: 80 },
+          { ware: 'energycells', amount: 20 },
+          { ware: 'water', amount: 40 },
         ],
         effects: [
-          { type: Effects.work, product: 0.4 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1187,7 +1228,7 @@ export const Wares = {
     icon: 'ware_sunriseflowers',
     volume: 5,
     transport: TransportType.container,
-    price: { min: 48, max: 112, avg: 80 },
+    price: { min: 74, max: 128, avg: 98 },
     group: WareGroups.agricultural,
     production: [
       {
@@ -1200,7 +1241,8 @@ export const Wares = {
           { ware: 'water', amount: 80 },
         ],
         effects: [
-          { type: Effects.work, product: 0.28 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1214,20 +1256,21 @@ export const Wares = {
     icon: 'ware_superfluidcoolant',
     volume: 16,
     transport: TransportType.container,
-    price: { min: 90, max: 211, avg: 150 },
+    price: { min: 132, max: 400, avg: 176 },
     group: WareGroups.refined,
     production: [
       {
-        time: 240,
-        amount: 95,
+        time: 300,
+        amount: 119,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 60 },
-          { ware: 'helium', amount: 320 },
+          { ware: 'energycells', amount: 75 },
+          { ware: 'helium', amount: 400 },
         ],
         effects: [
-          { type: Effects.work, product: 0.49 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1241,20 +1284,21 @@ export const Wares = {
     icon: 'ware_swampplant',
     volume: 6,
     transport: TransportType.container,
-    price: { min: 50, max: 117, avg: 84 },
+    price: { min: 77, max: 132, avg: 102 },
     group: WareGroups.agricultural,
     production: [
       {
-        time: 450,
-        amount: 120,
+        time: 600,
+        amount: 80,
         method: 'default',
         name: 'Teladi',
         wares: [
-          { ware: 'energycells', amount: 40 },
-          { ware: 'water', amount: 100 },
+          { ware: 'energycells', amount: 27 },
+          { ware: 'water', amount: 67 },
         ],
         effects: [
-          { type: Effects.work, product: 0.59 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1268,20 +1312,21 @@ export const Wares = {
     icon: 'ware_teladianium',
     volume: 16,
     transport: TransportType.container,
-    price: { min: 121, max: 283, avg: 202 },
+    price: { min: 180, max: 464, avg: 240 },
     group: WareGroups.refined,
     production: [
       {
-        time: 120,
-        amount: 70,
+        time: 300,
+        amount: 350,
         method: 'default',
         name: 'Teladi',
         wares: [
-          { ware: 'energycells', amount: 45 },
-          { ware: 'ore', amount: 280 },
+          { ware: 'energycells', amount: 226 },
+          { ware: 'ore', amount: 1400 },
         ],
         effects: [
-          { type: Effects.work, product: 0.43 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1295,22 +1340,23 @@ export const Wares = {
     icon: 'ware_turretcomponents',
     volume: 20,
     transport: TransportType.container,
-    price: { min: 164, max: 383, avg: 273 },
+    price: { min: 210, max: 600, avg: 280 },
     group: WareGroups.shiptech,
     production: [
       {
-        time: 1800,
-        amount: 170,
+        time: 600,
+        amount: 114,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 60 },
-          { ware: 'microchips', amount: 20 },
-          { ware: 'quantumtubes', amount: 20 },
-          { ware: 'scanningarrays', amount: 10 },
+          { ware: 'energycells', amount: 40 },
+          { ware: 'microchips', amount: 14 },
+          { ware: 'quantumtubes', amount: 14 },
+          { ware: 'scanningarrays', amount: 6 },
         ],
         effects: [
-          { type: Effects.work, product: 0.53 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1325,20 +1371,21 @@ export const Wares = {
     volume: 6,
     transport: TransportType.container,
     illegal: [ Factions.loanshark ],
-    price: { min: 32, max: 74, avg: 53 },
+    price: { min: 72, max: 180, avg: 96 },
     group: WareGroups.water,
     production: [
       {
-        time: 120,
-        amount: 193,
+        time: 300,
+        amount: 483,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 60 },
-          { ware: 'ice', amount: 320 },
+          { ware: 'energycells', amount: 150 },
+          { ware: 'ice', amount: 800 },
         ],
         effects: [
-          { type: Effects.work, product: 0.43 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1352,21 +1399,22 @@ export const Wares = {
     icon: 'ware_weaponcomponents',
     volume: 20,
     transport: TransportType.container,
-    price: { min: 171, max: 399, avg: 285 },
+    price: { min: 240, max: 640, avg: 320 },
     group: WareGroups.shiptech,
     production: [
       {
-        time: 1800,
-        amount: 170,
+        time: 600,
+        amount: 114,
         method: 'default',
         name: 'Universal',
         wares: [
-          { ware: 'energycells', amount: 60 },
-          { ware: 'hullparts', amount: 20 },
-          { ware: 'plasmaconductors', amount: 30 },
+          { ware: 'energycells', amount: 40 },
+          { ware: 'hullparts', amount: 14 },
+          { ware: 'plasmaconductors', amount: 20 },
         ],
         effects: [
-          { type: Effects.work, product: 0.53 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1378,9 +1426,9 @@ export const Wares = {
     description: 'A staple ingredient in food rations, wheat is grown across all of Argon space and consumed on a daily basis in the form of flatbread or bunyos. Where meat is still produced from Argnu, instead of synthesised or cloned, wheat is also fed to the animals, which results in meat of exceptional quality.',
     factoryName: 'Wheat Farm',
     icon: 'ware_wheat',
-    volume: 4,
+    volume: 2,
     transport: TransportType.container,
-    price: { min: 19, max: 44, avg: 31 },
+    price: { min: 26, max: 64, avg: 34 },
     group: WareGroups.agricultural,
     production: [
       {
@@ -1393,7 +1441,8 @@ export const Wares = {
           { ware: 'water', amount: 80 },
         ],
         effects: [
-          { type: Effects.work, product: 0.28 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1405,22 +1454,23 @@ export const Wares = {
     description: 'Chelts are sea-bound creatures that once roamed the seas and oceans of the Split home planet. The Split harvested them for meat, oil and their skins, which they used to create a tough leather like material. However, Chelts were eventually over-hunted and almost brought to extinction. Nowadays Chelts are grown in space, in Chelt Aquariums, and used to produce food for Split workers to consume.',
     factoryName: 'Chelt Aquarium',
     icon: 'ware_cheltmeat',
-    volume: 7,
+    volume: 2,
     transport: TransportType.container,
-    price: { min: 31, max: 72, avg: 51 },
+    price: { min: 53, max: 100, avg: 70 },
     group: WareGroups.agricultural,
     production: [
       {
-        time: 450,
-        amount: 209,
+        time: 300,
+        amount: 139,
         method: 'default',
         name: 'Split',
         wares: [
-          { ware: 'energycells', amount: 50 },
-          { ware: 'water', amount: 120 },
+          { ware: 'energycells', amount: 33 },
+          { ware: 'water', amount: 80 },
         ],
         effects: [
-          { type: Effects.work, product: 0.6 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1432,9 +1482,9 @@ export const Wares = {
     description: 'Scruffin are fruit similar to sweet potatoes. They are grown by Split farmers in large, open fields on a number of planets, as well as in space aboard large installations known as Scruffin Farms. Scruffin flesh is a versatile foodstuff that, when processed, provides the basis of a number of Split food types. Although Scruffin are traded both inside and outside Split territory, they are mainly in demand in areas where Split workers are in abundance.',
     factoryName: 'Scruffin Farm',
     icon: 'ware_scruffinfruit',
-    volume: 6,
+    volume: 2,
     transport: TransportType.container,
-    price: { min: 17, max: 40, avg: 28 },
+    price: { min: 29, max: 68, avg: 38 },
     group: WareGroups.agricultural,
     production: [
       {
@@ -1447,7 +1497,8 @@ export const Wares = {
           { ware: 'water', amount: 80 },
         ],
         effects: [
-          { type: Effects.work, product: 0.53 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1461,22 +1512,23 @@ export const Wares = {
     icon: 'ware_computronicsubstrate',
     volume: 50,
     transport: TransportType.container,
-    price: { min: 7452, max: 9108, avg: 8280 },
+    price: { min: 7800, max: 9000, avg: 8300 },
     group: WareGroups.hightech,
     production: [
       {
-        time: 600,
-        amount: 98,
+        time: 300,
+        amount: 49,
         method: 'default',
         name: 'Terran',
         wares: [
-          { ware: 'energycells', amount: 4000 },
-          { ware: 'hydrogen', amount: 2000 },
-          { ware: 'ore', amount: 3000 },
-          { ware: 'silicon', amount: 3000 },
+          { ware: 'energycells', amount: 2000 },
+          { ware: 'hydrogen', amount: 1000 },
+          { ware: 'ore', amount: 1500 },
+          { ware: 'silicon', amount: 1500 },
         ],
         effects: [
-          { type: Effects.work, product: 0.1 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
@@ -1489,7 +1541,7 @@ export const Wares = {
           { ware: 'scrapmetal', amount: 1000 },
         ],
         effects: [
-          { type: Effects.work, product: 0.1 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
         ],
       },
     ]
@@ -1503,21 +1555,22 @@ export const Wares = {
     icon: 'ware_metallicmicrolattice',
     volume: 1,
     transport: TransportType.container,
-    price: { min: 42, max: 57, avg: 50 },
+    price: { min: 52, max: 77, avg: 63 },
     group: WareGroups.hightech,
     production: [
       {
-        time: 180,
-        amount: 190,
+        time: 300,
+        amount: 317,
         method: 'default',
         name: 'Terran',
         wares: [
-          { ware: 'energycells', amount: 50 },
-          { ware: 'helium', amount: 130 },
-          { ware: 'ore', amount: 50 },
+          { ware: 'energycells', amount: 83 },
+          { ware: 'helium', amount: 217 },
+          { ware: 'ore', amount: 83 },
         ],
         effects: [
-          { type: Effects.work, product: 0.2 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1531,7 +1584,7 @@ export const Wares = {
     icon: 'ware_proteinpaste',
     volume: 4,
     transport: TransportType.container,
-    price: { min: 57, max: 134, avg: 96 },
+    price: { min: 39, max: 148, avg: 92 },
     group: WareGroups.agricultural,
     production: [
       {
@@ -1545,7 +1598,8 @@ export const Wares = {
           { ware: 'methane', amount: 200 },
         ],
         effects: [
-          { type: Effects.work, product: 0.3 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1559,7 +1613,7 @@ export const Wares = {
     icon: 'ware_siliconcarbide',
     volume: 20,
     transport: TransportType.container,
-    price: { min: 1202, max: 1627, avg: 1414 },
+    price: { min: 1254, max: 1820, avg: 1520 },
     group: WareGroups.hightech,
     production: [
       {
@@ -1574,7 +1628,8 @@ export const Wares = {
           { ware: 'silicon', amount: 300 },
         ],
         effects: [
-          { type: Effects.work, product: 0.2 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
       {
@@ -1587,7 +1642,7 @@ export const Wares = {
           { ware: 'scrapmetal', amount: 250 },
         ],
         effects: [
-          { type: Effects.work, product: 0.2 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
         ],
       },
     ]
@@ -1599,9 +1654,9 @@ export const Wares = {
     description: 'The term Stimulants has evolved to refer to the type of drugs that increase activity of the central nervous system and the body. The manufacture, distribution and use of Stimulants is considered illegal by the Terran government. However, there are persistent rumours that they are regularly used for specific military purposes, such as enhancing the combat performance of pilots.',
     factoryName: 'Stimulants Lab',
     icon: 'ware_stimulants',
-    volume: 12,
+    volume: 1,
     transport: TransportType.container,
-    price: { min: 153, max: 527, avg: 340 },
+    price: { min: 236, max: 415, avg: 315 },
     group: WareGroups.pharmaceutical,
     production: [
       {
@@ -1615,7 +1670,8 @@ export const Wares = {
           { ware: 'silicon', amount: 20 },
         ],
         effects: [
-          { type: Effects.work, product: 0.65 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1627,22 +1683,23 @@ export const Wares = {
     description: 'The MRE, Meal-Ready-to-Eat, was first invented on Earth in the 20th Century. Since that time the food that comprises it has developed and is more nutritious. These prehydrated meals require no preparation and are self-heating as required.',
     factoryName: 'MRE Packing Facility',
     icon: 'ware_terranmre',
-    volume: 2,
+    volume: 1,
     transport: TransportType.container,
-    price: { min: 32, max: 75, avg: 54 },
+    price: { min: 38, max: 66, avg: 51 },
     group: WareGroups.food,
     production: [
       {
-        time: 240,
-        amount: 175,
+        time: 300,
+        amount: 219,
         method: 'default',
         name: 'Terran',
         wares: [
-          { ware: 'energycells', amount: 60 },
-          { ware: 'proteinpaste', amount: 60 },
+          { ware: 'energycells', amount: 75 },
+          { ware: 'proteinpaste', amount: 75 },
         ],
         effects: [
-          { type: Effects.work, product: 0.42 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1656,21 +1713,22 @@ export const Wares = {
     icon: 'ware_bofu',
     volume: 4,
     transport: TransportType.container,
-    price: { min: 61, max: 142, avg: 101 },
+    price: { min: 90, max: 184, avg: 120 },
     group: WareGroups.food,
     production: [
       {
-        time: 240,
-        amount: 82,
+        time: 300,
+        amount: 103,
         method: 'default',
         name: 'Boron',
         wares: [
-          { ware: 'bogas', amount: 40 },
-          { ware: 'energycells', amount: 40 },
-          { ware: 'plankton', amount: 120 },
+          { ware: 'bogas', amount: 50 },
+          { ware: 'energycells', amount: 50 },
+          { ware: 'plankton', amount: 150 },
         ],
         effects: [
-          { type: Effects.work, product: 0.38 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1684,20 +1742,21 @@ export const Wares = {
     icon: 'ware_bogas',
     volume: 4,
     transport: TransportType.container,
-    price: { min: 44, max: 102, avg: 73 },
+    price: { min: 84, max: 172, avg: 112 },
     group: WareGroups.refined,
     production: [
       {
-        time: 150,
-        amount: 110,
+        time: 300,
+        amount: 220,
         method: 'default',
         name: 'Boron',
         wares: [
-          { ware: 'energycells', amount: 40 },
-          { ware: 'water', amount: 100 },
+          { ware: 'energycells', amount: 80 },
+          { ware: 'water', amount: 200 },
         ],
         effects: [
-          { type: Effects.work, product: 0.46 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
@@ -1711,20 +1770,21 @@ export const Wares = {
     icon: 'ware_plankton',
     volume: 1,
     transport: TransportType.container,
-    price: { min: 11, max: 25, avg: 18 },
+    price: { min: 17, max: 38, avg: 23 },
     group: WareGroups.agricultural,
     production: [
       {
-        time: 400,
-        amount: 275,
+        time: 300,
+        amount: 206,
         method: 'default',
         name: 'Boron',
         wares: [
-          { ware: 'energycells', amount: 20 },
-          { ware: 'water', amount: 50 },
+          { ware: 'energycells', amount: 15 },
+          { ware: 'water', amount: 38 },
         ],
         effects: [
-          { type: Effects.work, product: 0.4 },
+          { type: Effects.work, product: 0.5, cycle: 0.5 },
+          { type: Effects.secondaryResource, product: 0.1, cycle: 0.25 },
         ],
       },
     ]
