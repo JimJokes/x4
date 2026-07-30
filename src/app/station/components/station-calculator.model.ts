@@ -49,7 +49,7 @@ export interface StationProduction {
 
 export class StationModuleModel {
     module: StationModule;
-    needs: { amount: number, ware: Ware }[];
+    needs: { amount: number, ware: Ware, cycleDiscount: number }[];
     production: StationProduction[];
 
     private _count: number;
@@ -113,12 +113,14 @@ export class StationModuleModel {
 
                     // cycles per hour
                     const cycles = 3600 / currentProd.time;
+										const effect = currentProd.effects.find(y => y.type == Effects.work);
+										const cycleDiscount = effect? effect.product : 0;
 
                     this.production.push({ amount: currentProd.amount * cycles, ware: ware, value: currentProd });
                     currentProd.wares
                         .forEach(x => {
                             const neededWare = this.wareService.getEntity(x.ware);
-                            this.needs.push({ amount: x.amount * cycles, ware: neededWare });
+                            this.needs.push({ amount: x.amount * cycles, ware: neededWare, cycleDiscount: cycleDiscount });
                         });
                 }
             } else if (this.module.type == ModuleTypes.habitation) {
@@ -126,7 +128,7 @@ export class StationModuleModel {
                 const worker: ModuleWorker = Workers.get(this.module.workForce.race.id);
 
                 worker.consumption.forEach(x => {
-                    this.needs.push({ amount: x.amount * capacity / worker.amount, ware: x.ware });
+                    this.needs.push({ amount: x.amount * capacity / worker.amount, ware: x.ware, cycleDiscount: 0 });
                 });
             }
         }
@@ -165,7 +167,7 @@ export class ResourceCalculator {
         if (modules.length > 0) {
             data = modules
                 .map<WareProductionData[]>(x => {
-                    let modifier = 1
+                    let modifier = 1, values: StationResourceItemModel[];
                     if(x.module?.type === "Habitation") {
                         let capacity = x.module.workForce.capacity * x.count
                         if(partialWorkforce >= capacity) {
@@ -174,19 +176,30 @@ export class ResourceCalculator {
                             modifier = partialWorkforce / capacity
                             partialWorkforce = 0
                         }
-                    }
-
-                    const values: StationResourceItemModel[] = x.needs
-                        .map(y => ({
-                                ware: y.ware,
-                                count: x.count,
-                                amount: -y.amount,
-                                efficiency: modifier * 100,
-                                name: x.module.name,
-                                total: x.count * -y.amount * modifier,
-                                type: x.module.type
-                            })
-                        );
+												values = x.needs
+														.map(y => ({
+																ware: y.ware,
+																count: x.count,
+																amount: -y.amount,
+																efficiency: modifier * 100,
+																name: x.module.name,
+																total: x.count * -y.amount * modifier,
+																type: x.module.type
+															})
+														);
+                    }else {
+												values = x.needs
+														.map(y => ({
+																ware: y.ware,
+																count: x.count,
+																amount: -y.amount / (1 - y.cycleDiscount * multiplier),
+																efficiency: modifier * 100,
+																name: x.module.name,
+																total: x.count * -y.amount / (1 - y.cycleDiscount * multiplier),
+																type: x.module.type
+															})
+													);
+										}
 
                     if (x.production) {
                         for (let production of x.production) {
@@ -206,7 +219,7 @@ export class ResourceCalculator {
                             values.push({
                                 ware: production.ware,
                                 count: x.count,
-                                amount: production.amount,
+                                amount: production.amount * efficiency,
                                 efficiency: efficiency * 100,
                                 name: x.module.name,
                                 total: x.count * production.amount * efficiency,
